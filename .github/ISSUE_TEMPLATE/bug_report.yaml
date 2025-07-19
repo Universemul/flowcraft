@@ -1,0 +1,59 @@
+name: 🐛 Bug Report
+description: Report an unexpected behavior or issue
+title: "[BUG] "
+labels: [bug]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug!
+
+  - type: input
+    id: env
+    attributes:
+      label: Environment
+      description: Operating system, browser, or framework version
+      placeholder: e.g. macOS 14, Node.js 20.5, Chrome 124
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: Describe what happened and what you expected to happen instead.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: |
+        Provide step-by-step instructions to reproduce the bug.
+      placeholder: |
+        1. Go to ...
+        2. Click on ...
+        3. Observe the issue
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or Error Messages
+      description: Paste any relevant logs or errors here.
+      render: shell
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: Urgency Level
+      options:
+        - Low
+        - Medium
+        - High
+    validations:
+      required: true
